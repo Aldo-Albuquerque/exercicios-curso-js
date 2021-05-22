@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Checagem de Nacionalidade</h1>
+    Digite o sue país de origem: <input type="text" name="pais-origem" id="pais-origem">
+    <input type="button" value="Verificar" onclick="Verificar()">
+    <div id="nacionalidade">
+
+    </div>
+    <script>
+        function Verificar() {
+            var pais = window.document.getElementById("pais-origem").value
+            var nac = window.document.getElementById("nacionalidade")
+            nac.innerHTML = `<p>Seu país de origem é <strong>${pais}</strong>.<p>`
+            if(pais == "Brasil") {
+                nac.innerHTML += `<p>Nascido em <strong>${pais}</strong>, você é Brasileiro.<p>`
+            }else {
+                nac.innerHTML += `<p>Nascido em <strong>${pais}</strong>, você é estrangeiro.<p>`
+            }
+        }
+    </script>
+</body>
+</html>
